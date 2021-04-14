@@ -1,0 +1,26 @@
+{
+  "name": "dan_ghie_store",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "mariposaweb online store",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanSimonson/dan_ghie_store.git"
+  },
+  "author": "Dan Simonson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanSimonson/dan_ghie_store/issues"
+  },
+  "homepage": "https://github.com/DanSimonson/dan_ghie_store#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
