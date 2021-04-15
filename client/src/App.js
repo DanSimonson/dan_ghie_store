@@ -1,5 +1,3 @@
-import data from "./data";
-import Product from "./components/Product";
 import { BrowserRouter, Route } from "react-router-dom";
 import ProductPage from "./pages/ProductPage";
 import HomePage from "./pages/HomePage";
