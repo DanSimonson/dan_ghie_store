@@ -3,6 +3,7 @@ import express from "express";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import data from "./data.js";
+import userRouter from "./routers/userRouter.js";
 
 /**
  * mongodb+srv://dan123:dan123@cluster0.rty67.mongodb.net/store?retryWrites=true&w=majority
@@ -27,6 +28,8 @@ app.get("/api/products/:id", (req, res) => {
 app.get("/api/products", (req, res) => {
   res.send(data.products);
 });
+
+app.use("/api/users", userRouter);
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
