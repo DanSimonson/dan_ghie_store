@@ -1,6 +1,14 @@
 import express from "express";
+//import mongoose from "mongoose";
+import connectDB from "./config/db.js";
+import dotenv from "dotenv";
 import data from "./data.js";
 
+/**
+ * mongodb+srv://dan123:dan123@cluster0.rty67.mongodb.net/store?retryWrites=true&w=majority
+ */
+dotenv.config();
+connectDB();
 const app = express();
 
 app.get("/", (req, res) => {
