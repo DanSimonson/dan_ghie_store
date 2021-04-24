@@ -1,4 +1,4 @@
-### A Reservation System Project
+### A Shopping Website Project
 
 > This is a full stack (MERN) app with MongoDB, React, Express, Nodejs Shopping Website
 
