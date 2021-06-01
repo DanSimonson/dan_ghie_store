@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import ProductPage from "./pages/ProductPage";
 import HomePage from "./pages/HomePage";
+import OrderHistoryPage from "./pages/OrderHistoryPage";
 import CartPage from "./pages/CartPage";
 import SigninPage from "./pages/SigninPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -41,10 +42,16 @@ function App() {
                 <Link to="#">
                   {userInfo.name} <i className="fa fa-caret-down"></i>
                 </Link>
+
                 <ul className="dropdown-content">
-                  <Link to="#signout" onClick={signoutHandler}>
-                    Sign Out
-                  </Link>
+                  <li>
+                    <Link to="/orderHistory">Order History</Link>
+                  </li>
+                  <li>
+                    <Link to="#signout" onClick={signoutHandler}>
+                      Sign Out
+                    </Link>
+                  </li>
                 </ul>
               </div>
             ) : (
@@ -61,6 +68,7 @@ function App() {
           <Route path="/payment" component={PaymentMethodPage}></Route>
           <Route path="/placeorder" component={PlaceOrderPage}></Route>
           <Route path="/order/:id" component={OrderPage}></Route>
+          <Route path="/orderHistory" component={OrderHistoryPage}></Route>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
