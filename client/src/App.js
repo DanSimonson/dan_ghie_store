@@ -1,12 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import ProductPage from "./pages/ProductPage";
+import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import OrderHistoryPage from "./pages/OrderHistoryPage";
 import CartPage from "./pages/CartPage";
 import SigninPage from "./pages/SigninPage";
 import RegisterPage from "./pages/RegisterPage";
 import { signout } from "./actions/UserActions";
+import PrivateRoute from "./components/PrivateRoute";
 import ShippingAddressPage from "./pages/ShippingAddressPage";
 import PaymentMethodPage from "./pages/PaymentMethodPage";
 import PlaceOrderPage from "./pages/PlaceOrderPage";
@@ -42,8 +44,10 @@ function App() {
                 <Link to="#">
                   {userInfo.name} <i className="fa fa-caret-down"></i>
                 </Link>
-
                 <ul className="dropdown-content">
+                  <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
                   <li>
                     <Link to="/orderHistory">Order History</Link>
                   </li>
@@ -69,6 +73,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderPage}></Route>
           <Route path="/order/:id" component={OrderPage}></Route>
           <Route path="/orderHistory" component={OrderHistoryPage}></Route>
+          <PrivateRoute path="/profile" component={ProfilePage}></PrivateRoute>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
