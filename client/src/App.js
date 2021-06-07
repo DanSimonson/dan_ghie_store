@@ -15,6 +15,7 @@ import PaymentMethodPage from "./pages/PaymentMethodPage";
 import PlaceOrderPage from "./pages/PlaceOrderPage";
 import ProductListPage from "./pages/ProductListPage";
 import OrderPage from "./pages/OrderPage";
+import ProductEditPage from "./pages/ProductEditPage";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -89,6 +90,11 @@ function App() {
         <main>
           <Route path="/cart/:id?" component={CartPage}></Route>
           <Route path="/product/:id" component={ProductPage} exact></Route>
+          <Route
+            path="/product/:id/edit"
+            component={ProductEditPage}
+            exact
+          ></Route>
           <Route path="/signin" component={SigninPage}></Route>
           <Route path="/register" component={RegisterPage}></Route>
           <Route path="/shipping" component={ShippingAddressPage}></Route>
