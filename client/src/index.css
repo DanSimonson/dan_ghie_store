@@ -44,11 +44,12 @@ footer {
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
+  color: purple;
 }
 h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
-  color: #3f51b5;
+  color: purple; /*#3f51b5;*/
 }
 
 a {
@@ -128,6 +129,7 @@ a.brand {
 }
 .col-1 {
   flex: 1 1 25rem;
+  padding: 1rem;
 }
 .col-2 {
   flex: 2 1 50rem;
