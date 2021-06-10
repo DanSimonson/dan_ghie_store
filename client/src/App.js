@@ -111,7 +111,7 @@ function App() {
           <AdminRoute path="/orderlist" component={OrderListPage}></AdminRoute>
           <Route path="/" component={HomePage} exact></Route>
         </main>
-        <footer className="row center">All right reserved</footer>
+        <footer className="row center foot">mariposaweb.net</footer>
       </div>
     </BrowserRouter>
   );
