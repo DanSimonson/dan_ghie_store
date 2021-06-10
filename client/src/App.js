@@ -16,6 +16,7 @@ import PlaceOrderPage from "./pages/PlaceOrderPage";
 import ProductListPage from "./pages/ProductListPage";
 import OrderPage from "./pages/OrderPage";
 import ProductEditPage from "./pages/ProductEditPage";
+import OrderListPage from "./pages/OrderListPage";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -107,6 +108,7 @@ function App() {
             path="/productlist"
             component={ProductListPage}
           ></AdminRoute>
+          <AdminRoute path="/orderlist" component={OrderListPage}></AdminRoute>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
