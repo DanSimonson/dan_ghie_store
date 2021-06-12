@@ -73,7 +73,7 @@ export default function ProductPage(props) {
                 <li>
                   <Rating
                     rating={product.rating}
-                    numReviews={product.numReviews}
+                    //numReviews={product.numReviews}
                   ></Rating>
                 </li>
                 <li>Price : ${product.price}</li>
@@ -148,7 +148,7 @@ export default function ProductPage(props) {
               {product.reviews.map((review) => (
                 <li key={review._id}>
                   <strong>{review.name}</strong>
-                  <Rating rating={review.rating} caption=" "></Rating>
+                  <Rating rating={review.rating}></Rating>
                   <p>{review.createdAt.substring(0, 10)}</p>
                   <p>{review.comment}</p>
                 </li>
