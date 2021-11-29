@@ -1,3 +1,4 @@
+//added comment
 import bcrypt from "bcryptjs";
 const data = {
   users: [
