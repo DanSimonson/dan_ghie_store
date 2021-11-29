@@ -4,7 +4,7 @@
 
 ### DEMO
 
-[Click Here For DEMO ](https://mysterious-escarpment-64882.herokuapp.com/)
+[Click Here For DEMO ](https://dan-ghie-store.herokuapp.com/)
 
 ```
 
